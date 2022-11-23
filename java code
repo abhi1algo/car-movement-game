@@ -1,0 +1,68 @@
+package com.example.cargame;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    public void upfast(View view)
+    {
+        System.out.println("up");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().translationYBy(-10000).setDuration(1000);
+    }
+
+    public void up(View view)
+    {
+        System.out.println("up");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().translationYBy(-100).setDuration(100);
+    }
+
+    public void left(View view)
+    {
+        System.out.println("left");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().translationXBy(-100).setDuration(500);
+    }
+
+    public void right(View view)
+    {
+        System.out.println("right");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().translationXBy(100).setDuration(500);
+    }
+
+    public void down(View view)
+    {
+        System.out.println("down");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().translationYBy(100).setDuration(100);
+    }
+
+    public void reset(View view)
+    {
+        System.out.println("reset");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().translationY(0).translationX(0).setDuration(10);
+
+
+    }
+
+    public void round(View view)
+    {
+        System.out.println("left");
+        ImageView car=(ImageView) findViewById(R.id.car);
+        car.animate().rotationBy(360).setDuration(500);
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
